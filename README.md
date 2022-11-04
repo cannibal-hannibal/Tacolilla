@@ -6,5 +6,5 @@
 
 Kurulum;
 > git clone https://github.com/cannibal-hannibal/Tacolilla<br>
-> pip3 install -r requirements.txt\n
+> pip3 install -r requirements.txt<br>
 > python3 taco.py
