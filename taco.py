@@ -55,7 +55,7 @@ def viewdns(domain):
     url = "https://viewdns.info/reverseip/?host="+domain+"&t=1"
     try:
         req = requests.get(url, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+            "User-Agent": UserAgent().random
         })
         sites = list(set(re.findall('</tr><tr> <td>(.*?)</td><td align="center">(.*?)</td>', req.text)))
         for site in sites:
