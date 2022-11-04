@@ -45,7 +45,10 @@ def admin_panel_finder(domain):
             if (req.status_code != 404 and 'type="password"' in req.text):
                 cms = cms_check(req.text)
                 print(f" {c2}+ {c3}CMS={c1}{cms} {c3}URL={c1}{nurl}")
-                open(cms+".txt","a").write(nurl+"\n")
+                if (cms != "Unknown")
+                    open(cms+".txt","a").write(url+"\n")
+                else:
+                    open(cms+".txt","a").write(nurl+"\n")
                 break
         except:
             continue
