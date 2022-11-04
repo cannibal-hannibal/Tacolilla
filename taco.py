@@ -19,7 +19,7 @@ paneller = [
 def cms_check(source):
     if ("/wp-content/" in source or "/wp-includes/" in source):
         return "WordPress"
-    elif ("index.php?option=com_" in source):
+    elif ("index.php?option=com_" in source or 'content="Joomla!' in source):
         return "Joomla"
     elif ("index.php?route=common/home" in source):
         return "OpenCart"
