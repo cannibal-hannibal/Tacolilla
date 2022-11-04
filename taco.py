@@ -41,7 +41,7 @@ def admin_panel_finder(domain):
         try:
             req = requests.get(nurl, headers={
                 "User-Agent":UserAgent().random
-            }, timeout=25)
+            })
             if (req.status_code != 404 and 'type="password"' in req.text):
                 cms = cms_check(req.text)
                 print(f" {c2}+ {c3}CMS={c1}{cms} {c3}URL={c1}{nurl}")
